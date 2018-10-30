@@ -1,0 +1,39 @@
+#main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 1;
+	align-content: start;
+	margin-right: 2vw;
+}
+#profile-img{
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	margin-right: 3vw;
+}
+#profile-txt{
+	display: flex;
+	flex-direction: column;
+}
+#progressBar{
+	width: 200px;
+	border-radius: 5px;
+	background: #efefef;
+}
+#progress{
+	height: 100%;
+	width: 94%;
+	border-radius: 5px;
+	background: #feca57;
+}
+#progress-status{
+	padding-left: 1vw;
+}
+.section-head{
+	width: 100%;
+	margin: 2vh 0;
+	font-size: 1.5em;
+	font-weight: 400;
+	font-family: Raleway;
+}

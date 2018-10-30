@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+:root{
+	--main-bg: #ffffff;/*f1f5f9*/
+	--card-bg: #ffffff;
+	--main-font: Nunito;
+	--main-color: #444444;/*1d3852*/
+}
+body{
+	margin: 0;
+	background: var(--main-bg);
+	font-family: var(--main-font);
+	color: var(--main-color);
+	overflow-x: hidden;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+h1, h2{
+	margin: 0;
+	font-family: Raleway;
+	font-weight: 700;
+}
+a{
+	text-decoration: none;
+}
+/* Head */
+
+header{
+	display: flex;
+	flex-direction: row;
+	padding: 3vh 2vw;
+}
+#logo{
+	display: flex;
+	flex: 0 0 250px;
+	color: #1dd1a1;
+}
+#header-right{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex: 1;
+}
+#search{
+	min-width: 400px;
+	width: 40%;
+	background: var(--card-bg);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	padding: 5px;
+	border-radius: 3px;
+}
+#header-right-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#search input{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-family: var(--main-font);
+	color: var(--main-color);
+	font-size: 1em;
+	width: 100%;
+	height: 100%;
+}
+.header-item{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin-left: 2vw;
+}
+
+/* Head */
+
+#body{
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+.card{
+	display: flex;
+	background: var(--card-bg);
+	border-radius: 3px;
+	padding: 2vw;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 0 0.5px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	margin: 0 1vw 1vw 0;
+}
+.card:hover{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 0 1px 0 rgba(0,0,0,0.2);
+	color: #111;
+}
+.horizontal{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.vertical{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#sidebar{
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 250px;
+	padding-left: 2vw;
+}
+.sidebar-sub{
+	margin: 0;
+	padding-bottom: 3vh;
+	display: flex;
+	flex-direction: column;
+}
+.sidebar-item{
+	display: flex;
+	align-items: center;
+	font-size: 1em;
+	color: var(--main-color);
+	padding-bottom: 1vh;
+}
+.sidebar-item img{
+	height: 18px;
+	width: 18px;
+	margin-right: 1vw;
+}

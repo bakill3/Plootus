@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+:root{
+	--main-bg: #ffffff;/*f1f5f9*/
+	--card-bg: #ffffff;
+	--main-font: Nunito;
+	--main-color: #444444;/*1d3852*/
+}
+body{
+	margin: 0;
+	background: var(--main-bg);
+	font-family: var(--main-font);
+	color: var(--main-color);
+	overflow-x: hidden;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+h1, h2{
+	font-family: Raleway;
+	margin: 0;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+/* Head */
+
+header{
+	display: flex;
+	flex-direction: row;
+	padding: 3vh 2vw;
+}
+#logo{
+	color: #1dd1a1;
+}
+#body{
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--card-bg);
+	max-width: 92vw;
+	border-radius: 3px;
+	padding: 2vw;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 0 1px 0 rgba(0,0,0,0.2);
+	color: #111;
+}
+form{
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.txt{
+	width: 500px;
+	max-width: 95%;
+	background: var(--main-bg);
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid #444;
+	font-size: 1em;
+	font-family: var(--main-font);
+	color: #111;
+}
+.txt:focus{
+	border-bottom-color: #1dd1a1; 
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+.gender{
+	cursor: pointer;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    padding-left: 35px;
+    white-space: nowrap;
+}
+.gender input{
+	position: absolute;
+    display: none;
+}
+.radio{
+	position: absolute;
+    top: 0;
+    left: 0;
+	height: 25px;
+	width: 25px;
+	background: #f2f2f2;
+	border-radius: 50%;
+}
+.gender:hover input ~ .radio {
+    background-color: #eee;
+}
+.gender input:checked ~ .radio {
+    background-color: #1dd1a1;
+}
+.radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.gender input:checked ~ .radio:after {
+    display: block;
+}
+.gender .radio:after {
+    left: 9px;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+.submit{
+	background: var(--main-bg);
+	border: 1px solid #444;
+	outline: 0;
+	padding: 2vh 2vw;
+	color: var(--main-color);
+	font-size: 1em;
+	font-weight: bold;
+}
+.submit:hover{
+	color: #1dd1a1;
+	border-color: #1dd1a1;
+}

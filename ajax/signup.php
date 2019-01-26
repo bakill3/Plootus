@@ -2,10 +2,10 @@
 include($_SERVER['DOCUMENT_ROOT']."/plootus/head/connect.php");
 
 if(isset($_POST['fName']) === true & isset($_POST['lName']) === true & isset($_POST['email']) === true & isset($_POST['password']) === true){
-	$fName = $_POST['fName'];
-	$lName = $_POST['lName'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$fName = htmlspecialchars(mysqli_real_escape_string($conStudent, $_POST['fName']));
+	$lName = htmlspecialchars(mysqli_real_escape_string($conStudent, $_POST['lName']));
+	$email = htmlspecialchars(mysqli_real_escape_string($conStudent, $_POST['email']));
+	$password = htmlspecialchars(mysqli_real_escape_string($conStudent, $_POST['password']));
 	$ip = $_SERVER['REMOTE_ADDR'];#user ip address
 	$date = date("Y-m-d");
 

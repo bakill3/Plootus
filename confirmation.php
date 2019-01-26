@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT']."/plootus/head/connect.php");
 session_start();
 
 if(isset($_GET['uid'])){ #if uid is given
-	$confirmationID = $_GET['uid'];
+	$confirmationID = htmlspecialchars(mysqli_real_escape_string($conStudent, $_GET['uid']);
 	$uidCheck = mysqli_query($conStudent, "SELECT UID,EmailUID,PhoneUID FROM IDConfirmation WHERE (EmailUID='$confirmationID' OR PhoneUID='$confirmationID') AND Confirmed='0'");
 	$uidRows = mysqli_num_rows($uidCheck);
 	if($uidRows==1){ #check if it exists in the DB
